@@ -19,13 +19,12 @@ if ($conn->connect_error) {
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $viewkey = $_POST['viewkey'];
 
     // Hash password
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
     // Insert user into database
-    $query = "INSERT INTO users (username, password, viewkey) VALUES ('$username', '$password_hash', '$viewkey')";
+    $query = "INSERT INTO users (username, password) VALUES ('$username', '$password_hash')";
     $result = $conn->query($query);
 
     if ($result) {
