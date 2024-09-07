@@ -20,15 +20,54 @@ body.dark-mode {
   color: #fff;
 }
 
+/* Toggle button styles */
+#dark-mode-toggle {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #444;
+}
+
+/* Dark mode toggle button styles */
+body.dark-mode #dark-mode-toggle {
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+  background-color: #ccc;
+}
+
 /* Responsive design */
 @media only screen and (max-width: 768px) {
-  /* Mobile styles here */
+  /* Mobile styles */
+  .container {
+    max-width: 90%; /* Center the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Tablet styles here */
+  /* Tablet styles */
+  .container {
+    max-width: 80%; /* Center the container */
+    margin: 0 auto; /* Center the container */
+    padding: 30px; /* Add some padding */
+  }
 }
 
 @media only screen and (min-width: 1025px) {
-  /* Desktop styles here */
+  /* Desktop styles */
+  .container {
+    max-width: 60%; /* Center the container */
+    margin: 0 auto; /* Center the container */
+    padding: 40px; /* Add some padding */
+  }
 }
